@@ -1,5 +1,9 @@
 ﻿<p align="center">
   <img src="assets/banner.png" alt="ACNL-Recomp" width="760">
+  <br>
+  <a href="https://opencode.ai">
+    <img src="https://img.shields.io/badge/built%20with-OpenCode-00B894?style=flat-square" alt="Built with OpenCode">
+  </a>
 </p>
 
 # ACNL-Recomp — launcher e instalador
@@ -133,3 +137,5 @@ licenças próprias. Veja [`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt).
 - [Inno Setup](https://jrsoftware.org/isinfo.php) — gera o instalador.
 - [ps2exe](https://github.com/MScholtes/PS2EXE) — compila o launcher PowerShell
   em `.exe`.
+
+Lista completa de pessoas e projetos em [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
