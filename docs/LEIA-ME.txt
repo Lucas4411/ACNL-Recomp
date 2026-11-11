@@ -1,0 +1,115 @@
+﻿==============================================================
+  ACNL-Recomp - Instalador  |  Launcher v2.0
+==============================================================
+
+Este instalador monta o ACNL-Recomp no seu PC e baixa as
+dependencias necessarias. Ele NAO inclui ROM, assets ou codigo
+do jogo: cada pessoa usa o seu proprio dump e recompila na
+propria maquina.
+
+--------------------------------------------------------------
+REQUISITOS
+--------------------------------------------------------------
+- Windows 10/11 64 bits
+- Internet na primeira instalacao (para baixar Zakuro e GCC)
+- GPU compativel com Vulkan (recomendado) ou OpenGL
+- Seu proprio dump de Animal Crossing: New Leaf (.3ds ou .cxi)
+
+--------------------------------------------------------------
+COMO INSTALAR
+--------------------------------------------------------------
+1. Execute ACNL-Setup-2.0.exe.
+2. Escolha a pasta (padrao: %LOCALAPPDATA%\ACNL-Recomp) e
+   conclua a instalacao.
+3. Ao terminar, o instalador baixa automaticamente:
+   - Zakuro (runtime oficial, do GitHub)
+   - w64devkit (GCC portatil, do GitHub oficial)
+   e abre o launcher. Os downloads sao verificados por SHA256,
+   com ate 3 tentativas automaticas e exibicao de velocidade/ETA.
+4. No launcher, aba Jogar:
+   - Clique em "Procurar..." e selecione SUA ROM (.3ds/.cxi).
+   - Clique em "Recompilar" na primeira vez.
+     A barra mostra o progresso real (X de Y arquivos e %).
+     Para desistir, clique no mesmo botao, agora "Cancelar".
+   - Clique em "JOGAR".
+
+Se a instalacao das dependencias falhar, abra o atalho
+"Atualizar dependencias" no menu Iniciar para tentar de novo.
+
+--------------------------------------------------------------
+O QUE O INSTALADOR COLOCA NA PASTA
+--------------------------------------------------------------
+- ACNL-Launcher.exe   launcher (interface grafica)
+- ACNL-Bootstrap.exe  baixa/atualiza Zakuro e w64devkit (GCC)
+- 3dsrecomp.exe       recompilador (embutido, MIT)
+- zakuro\             runtime baixado do GitHub oficial
+- tools\w64devkit\    GCC portatil baixado do GitHub oficial
+- output\             DLL recompilada (gerada na sua maquina)
+- game-data\          saves e dados locais do jogo
+- launcher_config.json  configuracoes do launcher
+
+--------------------------------------------------------------
+RECURSOS DO LAUNCHER
+--------------------------------------------------------------
+- Jogar: ROM, Recompilar, JOGAR, saves, backup, log, settings.toml
+- Janela do jogo com titulo limpo (Animal Crossing: New Leaf) e icone
+- Graficos: API grafica, rasterizador, resolucao interna 1x-4x,
+  tamanho da janela, disposicao das telas, formato da tela,
+  filtro, escala inteira, 3D, texturas HD, interpolacao de frames
+- Botao "Preencher tela (16:9)": usa apenas a tela superior no
+  formato 16:9, eliminando as bordas pretas no fullscreen.
+  No jogo, F10 alterna para a tela inferior.
+- Controles: remapeamento completo de teclado e controle
+- Estatisticas: tempo total, sessoes, ultima sessao, historico
+- Sobre: informacoes do projeto e aviso legal
+
+Atalhos no jogo:
+  Esc  menu do Zakuro       F1   pausar/despausar
+  F9   trocar layout        F10  inverter telas
+  F11  tela cheia           Tab  fast-forward (segurar)
+  F5   salvar estado        F8   carregar estado
+
+--------------------------------------------------------------
+RECOMPILACAO: PROGRESSO E CANCELAMENTO
+--------------------------------------------------------------
+- A barra de progresso usa a contagem real do 3dsrecomp
+  ("compiled X of Y"), alem dos arquivos .o gerados.
+- Durante a recompilacao, o botao "Recompilar" vira
+  "Cancelar". Ele encerra o processo e os compiladores filhos.
+- Se voce cancelar, a DLL antiga (se existir) e preservada.
+
+--------------------------------------------------------------
+VERSAO PORTATIL (ZIP)
+--------------------------------------------------------------
+O arquivo ACNL-Portable-2.0.zip nao precisa de instalador:
+1. Extraia para uma pasta sua (ex.: C:\ACNL-Recomp).
+2. Execute INICIAR.cmd.
+3. Na primeira vez, ele baixa Zakuro e o GCC e abre o launcher.
+Nas proximas vezes, abre direto. Saves, output e configuracoes
+ficam dentro da propria pasta portatil.
+
+--------------------------------------------------------------
+CONFIGURACOES E SAVES
+--------------------------------------------------------------
+- launcher_config.json -> fica na pasta de instalacao (ROM,
+  graficos, controles e estatisticas do launcher)
+- %APPDATA%\zakuro\settings.toml -> configuracoes do Zakuro
+  (o launcher preserva [enhancements] e [per_game])
+- game-data\ -> saves locais usados pelo launcher
+
+Ao desinstalar, os saves (game-data), a DLL recompilada (output)
+e o launcher_config.json sao preservados.
+
+--------------------------------------------------------------
+AVISO LEGAL
+--------------------------------------------------------------
+Este instalador nao contem e nao distribui ROM, assets ou
+qualquer material protegido por direitos autorais da Nintendo.
+Voce precisa possuir uma copia legitima do jogo e gerar o seu
+proprio dump. Animal Crossing e Nintendo 3DS sao marcas da
+Nintendo Co., Ltd. Projeto sem fins lucrativos, para uso pessoal
+e preservacao.
+
+Zakuro e 3dsrecomp sao distribuidos sob a licenca MIT. O w64devkit
+e seus componentes (GCC, binutils, GDB, make) tem licencas proprias.
+Veja THIRD-PARTY-NOTICES.txt para os creditos completos.
