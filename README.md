@@ -1,4 +1,8 @@
-﻿# ACNL-Recomp — launcher e instalador
+﻿<p align="center">
+  <img src="assets/banner.png" alt="ACNL-Recomp" width="760">
+</p>
+
+# ACNL-Recomp — launcher e instalador
 
 Código-fonte do launcher e do instalador do **ACNL-Recomp**, a recompilação
 estática de *Animal Crossing: New Leaf* (Nintendo 3DS) para x86_64 no Windows.
@@ -20,6 +24,7 @@ cópia legítima do jogo e gerar o seu próprio dump (`.3ds` ou `.cxi`).
 | `build/` | Scripts que compilam o launcher, o instalador e a versão portátil |
 | `portable/` | `INICIAR.cmd` e `ATUALIZAR-DEPENDENCIAS.cmd` da versão portátil |
 | `docs/` | `LEIA-ME.txt` (usuário final), `COMO-COMPILAR.md` e `PUBLICAR.md` |
+| `assets/` | Logo e ícone do projeto (SVG, PNG e `.ico`) |
 
 ---
 
@@ -83,6 +88,23 @@ powershell -ExecutionPolicy Bypass -File launcher\ACNL-Launcher.ps1
 - **Controles:** remapeamento completo de teclado e controle.
 - **Estatísticas:** tempo total, sessões, última sessão e histórico recente.
 - **Sobre:** informações do projeto, créditos e aviso legal.
+
+---
+
+## Identidade visual
+
+A logo e o ícone ficam em [`assets/`](assets):
+
+| Arquivo | Uso |
+| :--- | :--- |
+| `logo.svg` / `banner.png` | Banner horizontal (1280×320) para o README e divulgação |
+| `logo-claro.svg` / `logo-escuro.svg` | Versões sem fundo, para fundo claro e escuro |
+| `icone.svg` / `icone.png` | Ícone quadrado (512×512) |
+| `icone-transparente.svg` | Ícone sem fundo |
+| `acnl-recomp.ico` | Ícone multi-resolução (16–256) para Windows |
+
+As cores seguem a paleta do launcher: verde `#00B894` / `#3DDC84` sobre fundo
+escuro `#0E1A16`.
 
 ---
 
