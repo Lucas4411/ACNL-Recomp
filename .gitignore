@@ -1,0 +1,42 @@
+# Saídas de build (geradas por build\*.ps1)
+installer/ACNL-Launcher.exe
+installer/ACNL-Bootstrap.exe
+installer/3dsrecomp.exe
+installer/output/
+dist/
+
+# Dependências baixadas em tempo de execução
+zakuro/
+tools/
+dependencies.txt
+
+# Dados gerados localmente pelo usuário
+output/
+game-data/
+*.dll
+*.hints
+*.o
+
+# ROMs e dumps (nunca commitar)
+*.3ds
+*.3dsx
+*.cci
+*.cia
+*.cxi
+*.app
+*.tmd
+*.nds
+*.nca
+*.nsp
+*.xci
+*.romfs
+*.exefs
+*.sav
+*.dsv
+*.zip
+*.7z
+
+# Configuração local (pode conter caminho da ROM)
+launcher_config.local.json
+settings.toml
+*.log
