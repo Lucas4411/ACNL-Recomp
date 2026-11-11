@@ -1,0 +1,77 @@
+﻿ACNL-Recomp - Avisos de terceiros
+=================================
+
+Este pacote inclui ou baixa os componentes abaixo. 3dsrecomp e
+Zakuro usam a licenca MIT (texto no fim deste arquivo). O
+w64devkit tem licencas proprias, detalhadas no item 3.
+
+1) 3dsrecomp
+   Recompilador estatico de binarios ARM11 do Nintendo 3DS.
+   https://github.com/fearkov/3dsrecomp
+   Licenca: MIT (conforme Cargo.toml do projeto)
+   Copyright (c) 2026 fearkov
+   O binario incluido foi compilado a partir do codigo oficial;
+   apenas strings de caminho da maquina de build foram
+   normalizadas, sem mudanca de comportamento.
+
+2) Zakuro
+   Runtime e emulador HLE para Nintendo 3DS.
+   https://github.com/fearkov/zakuro
+   Licenca: MIT
+   Copyright (c) 2026 fearkov
+   O Zakuro e baixado pelo instalador a partir da pagina oficial
+   de releases do GitHub. O arquivo LICENSE acompanha o download.
+
+3) w64devkit (GCC)
+   Kit portatil de compilacao C/C++ para Windows, usado na
+   recompilacao. Inclui Mingw-w64 GCC, binutils, GDB, GNU Make
+   e outros utilitarios.
+   https://github.com/skeeto/w64devkit
+   O w64devkit e baixado pelo instalador a partir da pagina
+   oficial de releases do GitHub, junto com os arquivos de
+   licenca do proprio pacote.
+   Licencas dos componentes:
+   - GCC e binutils: GPLv3 (com GCC Runtime Library Exception)
+   - Mingw-w64 runtime: licencas BSD-style; o texto completo
+     acompanha o download em COPYING.MinGW-w64-runtime.txt
+   - Demais utilitarios: licencas proprias, conforme o pacote
+   O uso do GCC nao obriga a abrir o codigo da DLL gerada, pois
+   o runtime do GCC e coberto pela GCC Runtime Library Exception.
+
+4) ACNL-Recomp Launcher
+   Launcher grafico do projeto ACNL-Recomp.
+   Interface, configuracao e integracao com Zakuro/3dsrecomp.
+   Autor: Lucas4411 - https://github.com/Lucas4411
+   Desenvolvimento assistido por OpenCode (agente de IA):
+   https://opencode.ai
+   Compilado com ps2exe sobre PowerShell + WPF; instalador
+   gerado com Inno Setup 6.
+   Projeto sem fins lucrativos, para uso pessoal e preservacao.
+
+Observacao: nenhum componente deste pacote contem ROM, assets ou
+codigo do jogo. O usuario precisa possuir uma copia legitima de
+Animal Crossing: New Leaf e gerar o seu proprio dump.
+
+
+MIT License
+-----------
+
+Copyright (c) 2026 fearkov (3dsrecomp, Zakuro)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
